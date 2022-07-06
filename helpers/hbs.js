@@ -15,15 +15,15 @@ module.exports = {
         return input.replace(/<(?:.|\n)*?>/gm, '')
     },
     editIcon: function (storyUser, loggedUser, storyId, floating = true) {
-        if (storyUser.toString() == loggedUser.toString()) {
-            if (floating) {
-                return `<a href="/stories/edit/${storyId}" class="btn-floating halfway-fab blue"><i class="fas fa-edit fa-small"></i></a>`
-            } else {
-                return `<a href="/stories/edit/${storyId}"><i class="fas fa-edit"></i></a>`
-            }
-        } else {
-            return ''
-        }
+        // if (storyUser.toString() == loggedUser.toString()) {
+        //     if (floating) {
+        //         return `<a href="/stories/edit/${storyId}" class="btn-floating halfway-fab blue"><i class="fas fa-edit fa-small"></i></a>`
+        //     } else {
+        //         return `<a href="/stories/edit/${storyId}"><i class="fas fa-edit"></i></a>`
+        //     }
+        // } else {
+        //     return ''
+        // }
     },
     //how to use select on handlebars {stack}
     select: function(selected, options){
