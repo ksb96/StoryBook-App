@@ -1,0 +1,4 @@
+{"_id":{"$oid":"62aac09ef00c104585d0cf38"},"googleId":"114602196238144796168","displayName":"M82CF6_Social","firstName":"M82CF6_Social","image":"https://lh3.googleusercontent.com/a-/AOh14Gig6f3JlUBkbppbO66DLZQbQZYKnrB-WelGEmJ2=s96-c","createAt":{"$date":{"$numberLong":"1655357598286"}},"__v":{"$numberInt":"0"}}
+
+//storing sessions
+{"_id":"fDIb5OnRRwTgjwtPyzZCxljK8l9B0aLj","expires":{"$date":{"$numberLong":"1656911228596"}},"session":"{\"cookie\":{\"originalMaxAge\":null,\"expires\":null,\"httpOnly\":true,\"path\":\"/\"},\"passport\":{\"user\":{\"id\":\"62aac09ef00c104585d0cf38\"}}}"}

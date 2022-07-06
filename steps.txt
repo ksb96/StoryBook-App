@@ -1,0 +1,180 @@
+PART - 1
+1)atlas(mongo) account creation
+2)new cluster create
+3)database access - create user(new)
+4)network access - add ip(global)-from anywhere/anyone can access
+
+PART - 2
+1)npm init
+2)install packages(npm)
+npm i express mongoose connect-mongo express-session express-handlebars dotenv method-override moment(date format) morgan(login) passport(auth) passport-google-oauth20
+3)install dev-depen.
+npm i -D nodemon cross-env(production envi)
+
+PART - 3
+1) creating the "app.js" file which is the entry point
+2) creating the basis server(in app.js)
+3) creating "config.env" file for storing global vars, which will be used in the entire project
+4) prod/dev mode !!!
+
+PART - 4
+1) connect to database(inside, config->db.js)
+
+STEP - 5
+1) set-up morgan (for login)
+to show what http methods are gone for response
+
+STEP - 6
+1) set up template enging (using - handlebars)
+2) on (app.js) add "exphbs-handlebars"
+3) create a "view" folder inside that added "layout" folder inside that we added 2 view.hbs file(main, login) -->which the user will see(webpage)
+
+STEP - 7
+1) creates routes folder(i.e, navigating through the app), "index.js"(the routing file)
+2) login, dashboard routes are created.
+
+STEP - 8
+1)using materialize.css CDN
+2)using font-awsome from cdnjs
+
+STEP - 9
+1) Setting the static folder(public:css) in app.js
+2)  adding the public/css folder path on main.hbs
+
+STEP - 10
+1) creating the login layout(views/layout)
+2) new login.hbs layout added with style.css
+
+STEP - 11
+1) styling the login page
+
+STEP - 12
+1) start google login
+2) create a api key seq.(google cloud console)
+3) create new prj(dev1)-apis & services(enable it)-enable"Google+ API"
+4) credentials -- create api -- create OAuth client ID
+5) url redirect - http://localhost:3000/auth/google/callback
+6) now copy the client ID and secret to the config.env file 
+
+STEP - 13
+1) Passport.js for authentication
+2) select "passport-google-oauth2.0"
+3) on convi folder create "passport.js" file
+4) on app.js require the "passport"(config)
+5) add the passport middleware
+6) add/create the 'session' in app.js
+7) on 'passport.js' file(used for passport oauth strategy purpose), require googleStrategy, mongoose, and call the User(from models)
+
+STEP 13.1(authenticating with google, using 'passport')
+1) to use the strategy(which is created on the passport.js) on routes/auth.js
+2) routing to auth/google (on auth.js file)
+3) creating callback(fail), redirected to (/dashboard)
+4) routing to /auth(in app.js)
+
+Step - 14
+1) create model/User.js
+2) include the 'mongoose'
+3) on User.js create the schema(for authenticating with google) & pass on the userSchema on 'moduleExports'
+
+STEP - 15
+1) saving google profile data(user data)
+2) in 'passport.js' saving the google data(user), as acc. to user schema(in User.js)
+3) use a try-catch block for err
+4) after login-in(through google), it will route to '/dashboard' page) 
+
+STEP 15.1
+1) on mongo atlas
+2) collections -> storybooks(db), users(collection)-->key,value pair data
+
+STEP - 16
+1) logout
+2) logout logic(in auth.js) + after logout redirect to 'home' page
+
+STEP - 17
+1) navigation(nav-bar)
+2) folder create on (views/partials), filename - _header.hbs (inserting into a view {main})
+3) insert the '_header' file on 'main.hbs'
+
+STEP - 18
+1) adding auth middleware(fixing - /dashboard, /login....etc)
+2) /middleware/auth.js
+
+STEP - 19
+1) store session in db(use "connect-mongo" package, extension)
+2) in app.js, use 'connect-mongo' with 'mongoUrl: process.env.MONGO_URI'
+
+STEP - 20
+1) create 'Story Model'
+2) create 'Story.js' in models
+3) create a Schema in 'Story.js' file
+
+STEP - 21
+1) dashboard stories
+2) on 'index.js' file rendering the data to the template using '.lean()' method
+3) creating the logic on 'dashboard.hbs' file for if the stories are added or not.(currently !)
+4) loop through the stories(if block)
+
+STEP - 21.1(add button-icon)
+1) adding the add_button for stories.
+2) creating the file(_add_btn.hbs) on partials
+
+STEP - 21.2(after pressing the add-icon)
+1) add story
+2) create folder (stories/add.hbs) in views
+3) POST request is used for /stories(add.hbs)
+4) route the /stories(add.hbs) in 'stories.js' on /routes/stories.js
+5) render the 'stories/add' in 'stories.js' file
+6) route the 'stories/add' in 'app.js' file
+
+STEP - 21.3(select (status) drop-down)
+1) on 'main.hbs' file use the "FormSelect" on <script> tag
+
+STEP - 21.4(add ckeditor from cdnjs)
+1) modifying the text editor
+2) copy the js sriptor from cdnjs and paste it in 'main.hbs' file
+3) use 'CKEDITOR.replace()' on main.hbs file.
+4) "Process add form(POST req)" 
+	a) add body-parser middleware (in 		app.js)
+
+
+STEP - 22
+1) public stories - to showcase the stories which are public(all user/s)
+2) create a file (index.hbs) inside ./views/stories
+3) add the boiler template on index.hbs with .card
+4) now goto stories.js file to route GET req(/stories) //fetch the stories and render them(on stories.js)--GET request
+
+STEP - 23(truncate & strip tags)
+1) create a folder 'helpers' inside that create 'hbs.js' file.
+2) insert the 'truncate', 'strip tags' logic on 'hbs.js' file
+3) insert the 'helper/hbs' as "const" in app.js
+4) use 'helpers' on 'handlebars'(app.js file)
+
+STEP - 24(edit icon)
+1) editIcon visible on cards(stories), logic added on 'hbs.js' file.
+2) adding 'express-global variable(middleware) on 'app.js' file //purpose is to access user from within the template.
+
+STEP - 24.1(Edit story - after pressing the edit btn/icon)
+1) route to edit page, add route to 'stories.js' file
+2) change the 'edit.hbs' file accordingly.
+3) add 'how to use the select(for public/private) on handlebars' logic on 'hbs.js' file. //mainly RegEx
+
+STEP - 25(Method override for PUT request)
+1) updating on the server by PUT request
+2) add middleware(methodOverride) on 'app.js' file(hidden method to request & replace/update)
+3) PUT(update) logic in 'stories.js' file
+4) add 'body-parser', in 'app.js'
+5) npm 'body-parser',  'method-override' in 'package.json' file.
+
+STEP - 26(Method override for DELETE request)
+1) add the form tag and the method override on 'dashboard.hbs' file
+2) add the delete logic on route 'stories.js' file
+
+STEP - 27(Single story page)
+1) after clicking "read more" the page should route to the entire story.
+2) create a 'show.hbs' file for seeing the the full story in a single page.
+3) add the single story logic in 'stories.js' file (GET req)
+
+
+STEP - 28(user stories)
+1) after clicking the user id(gmail) route to the story(id)
+2) '/stories/user/:userId' GET req in 'stories.js' file
