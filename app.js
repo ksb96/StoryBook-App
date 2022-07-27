@@ -10,12 +10,16 @@ const mongoose = require('mongoose')
 const MongoStore = require('connect-mongo');
 const hbs = require('express-handlebars')
 const connectDB = require('./config/db')
+var favicon = require('serve-favicon')
 
 
 //package.json
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // "start": "cross-env NODE_ENV=production node app",
 // "dev": "cross-env NODE_ENV=development nodemon app"
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// deplo
+// "start": "node app.js"
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 //load config files
@@ -29,6 +33,9 @@ connectDB()
 
 //init the app
 const app = express()
+
+//favicon 
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 
 //shows what http methods, for response or so
 if (process.env.NODE_ENV === 'development') {
