@@ -94,7 +94,7 @@ app.use(methodOverride(function (req, res) {
 
 //body-parser middleware
 app.use(express.urlencoded({
-    extended: true
+    extended: false
 }))
 app.use(express.json())
 
