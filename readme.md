@@ -33,3 +33,25 @@ STEP - 2 -> In "config.env file", update the "GOOGLE_CLIENT_ID" variable value w
 
 # To access the app - 
 URL - https://storybook-app.up.railway.app/
+
+# Screenshots
+
+<h2> Desktop view</h2>
+
+![image](https://user-images.githubusercontent.com/52975077/201636798-93f657ad-7ce1-405a-879e-f056145021ab.png)
+
+![image](https://user-images.githubusercontent.com/52975077/201636928-268f7a23-7a64-49c5-98a0-b5c109de5cc4.png)
+
+<h3>add a story</h3>
+
+![image](https://user-images.githubusercontent.com/52975077/201637142-aefb5661-a0b1-43a4-aebe-1aea86f98fc3.png)
+
+<h2> Mobile view</h2>
+
+![image](https://user-images.githubusercontent.com/52975077/201637703-ad8c678c-435b-4e72-b491-f859a3c07381.png)
+
+![image](https://user-images.githubusercontent.com/52975077/201637374-3057420c-d3ae-496d-b08e-779516038418.png)
+
+<h3>add a story</h3>
+
+![image](https://user-images.githubusercontent.com/52975077/201637500-3e41a48d-f08a-4a83-8c38-2ad7e2d6ba7d.png)
