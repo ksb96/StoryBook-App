@@ -48,9 +48,7 @@ URL - https://storybook-app.up.railway.app/
 
 <h2> Mobile view</h2>
 
-![image](https://user-images.githubusercontent.com/52975077/201637703-ad8c678c-435b-4e72-b491-f859a3c07381.png)
-
-![image](https://user-images.githubusercontent.com/52975077/201637374-3057420c-d3ae-496d-b08e-779516038418.png)
+![image](https://user-images.githubusercontent.com/52975077/201637703-ad8c678c-435b-4e72-b491-f859a3c07381.png) ![image](https://user-images.githubusercontent.com/52975077/201637374-3057420c-d3ae-496d-b08e-779516038418.png)
 
 <h3>add a story</h3>
 
