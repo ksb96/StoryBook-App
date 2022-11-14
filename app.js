@@ -81,16 +81,16 @@ app.use(session({
 
 //Middleware's block
 
-//methoe-override middleware
+//method-override middleware
 app.use(bodyParser.urlencoded())
 app.use(methodOverride(function (req, res) {
     if (req.body && typeof req.body === 'object' && '_method' in req.body) {
-      // look in urlencoded POST bodies and delete it
-      let method = req.body._method
-      delete req.body._method
-      return method
+        // look in urlencoded POST bodies and delete it
+        let method = req.body._method
+        delete req.body._method
+        return method
     }
-  }))
+}))
 
 //body-parser middleware
 app.use(express.urlencoded({
@@ -103,7 +103,7 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 //express-global var (middleware)
-app.use(function(req, res, next){
+app.use(function (req, res, next) {
     //access user from within the template 
     res.locals.user = req.user || null
     next()
