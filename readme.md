@@ -33,6 +33,7 @@ STEP - 2 -> In "config.env file", update the "GOOGLE_CLIENT_ID" variable value w
 
 # To access the app - 
 URL 1 - https://storybook-app.up.railway.app/
+<br>
 URL 2 - https://short-storybook.cyclic.app/
 
 # Screenshots
