@@ -32,7 +32,9 @@ STEP - 1 -> In "package.json file", remove the "start" & "dev" content and updat
 STEP - 2 -> In "config.env file", update the "GOOGLE_CLIENT_ID" variable value with the "Client ID" value (console.cloud.google.com/apis/credentials/oauthclient/)
 
 # To access the app - 
-URL - https://storybook-app.up.railway.app/
+URL 1 - https://storybook-app.up.railway.app/
+<br>
+URL 2 - https://short-storybook.cyclic.app/
 
 # Screenshots
 
